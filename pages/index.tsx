@@ -19,7 +19,15 @@ const Home: NextPage = () => {
   return (
     <div>
       <h1>My Pokemon App</h1>
-      <div>{JSON.stringify(pokemon)}</div>
+      <div>
+        {pokemon.map((pokemon) => {
+          return (
+            <div key={pokemon.id}>
+              <h3>{pokemon.name}</h3>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
